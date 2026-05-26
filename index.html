@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Econex Env Solutions LLP provides premium B2B environmental solutions, specializing in Organic Waste Management, Organic Waste Converter (OWC) machines, Sewage Treatment, Plastic Recycling, and Biomining.">
+  <meta name="keywords" content="organic waste management, organic waste converter, OWC machine, plastic waste management, sewage treatment plant, biomining services, environmental infrastructure, waste recycling">
+  <meta name="author" content="Econex Env Solutions LLP">
+  <title>Econex Env Solutions LLP | Sustainable Waste Management & Infrastructure Solutions</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- JS Script (deferred for loading performance) -->
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- --- Toast Notification Container --- -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- --- Header / Navigation --- -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="headerLogo">
+        <!-- SVG Custom Leaf-Infinity-Gear B2B Logo -->
+        <svg class="logo-icon" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Left Loop: Leaf -->
+          <path d="M 80 45 C 50 15, 15 15, 15 45 C 15 75, 50 75, 80 45 Z" fill="none" stroke="#1F6F50" stroke-width="11" stroke-linecap="round" />
+          <path d="M 15 45 C 35 40, 60 45, 80 45" stroke="#2FAF90" stroke-width="4.5" stroke-linecap="round" />
+          
+          <!-- Right Loop: Gear -->
+          <path d="M 80 45 C 110 15, 145 15, 145 45 C 145 75, 110 75, 80 45 Z" fill="none" stroke="#243238" stroke-width="11" stroke-linecap="round" />
+          
+          <!-- Gear teeth -->
+          <g transform="translate(112.5, 45)">
+            <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#243238" transform="rotate(-90)" />
+            <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#243238" transform="rotate(-60)" />
+            <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#243238" transform="rotate(-30)" />
+            <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#243238" transform="rotate(0)" />
+            <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#243238" transform="rotate(30)" />
+          </g>
+        </svg>
+        <div class="logo-text-wrapper">
+          <span class="logo-main">ECONEX</span>
+          <span class="logo-sub">ENV SOLUTIONS LLP</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#owc" class="nav-link">OWC Machines</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary" id="navConsultationBtn">Get Consultation</a>
+      </div>
+
+      <div class="mobile-toggle" id="mobileMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 1. Hero Section --- -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="section-tag">Engineering a Circular Future</span>
+        <h1 class="hero-title">Sustainable Environmental Solutions <span>for a Cleaner Tomorrow</span></h1>
+        <p class="hero-subtitle">Professional waste management and environmental infrastructure services for industries, commercial complexes, municipal institutions, and communities.</p>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" id="heroCtaPrimary">Get Consultation</a>
+          <a href="#services" class="btn btn-secondary" id="heroCtaSecondary">Explore Services</a>
+        </div>
+        
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>KSPCB Compliant Setups</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Strategic Technology Partners</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>End-to-End Operation Contracts</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal">
+        <div class="hero-image-wrapper">
+          <img src="img/hero_industrial_eco.png" alt="Econex Environmental Infrastructure Facility" class="hero-image">
+        </div>
+        
+        <!-- Floating Badges for Visual Richness -->
+        <div class="floating-badge badge-1">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <div class="badge-info">
+            <h4>ISO 9001 & 14001</h4>
+            <p>Certified Standards</p>
+          </div>
+        </div>
+        
+        <div class="floating-badge badge-2">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="badge-info">
+            <h4>Pollution Board Approved</h4>
+            <p>100% Compliant Setups</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- --- 2. About Us Section --- -->
+  <section id="about" class="section section-bg-white">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <div class="about-image-stack">
+          <img src="img/hero_industrial_eco.png" alt="Industrial Environment Plant" class="about-img about-img-1">
+          <img src="img/recycling_facility.png" alt="Plastic Recycling Sorter" class="about-img about-img-2">
+          
+          <div class="about-experience-badge">
+            <span class="years">Eco</span>
+            <span class="label">Committed to<br>Trust & Quality</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-content reveal">
+        <span class="section-tag">About Econex</span>
+        <h2 class="section-title">Driving Environmental Engineering Excellence</h2>
+        <p class="section-subtitle">Econex Env Solutions LLP is an environmental engineering firm specializing in waste remediation and sustainable environmental setups. We design, supply, and operate systems in partnership with leading manufacturers, transitioning organizations toward zero waste.</p>
+        
+        <div class="about-tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="tabMission">Our Mission</button>
+            <button class="tab-btn" data-tab="tabValues">Core Commitments</button>
+            <button class="tab-btn" data-tab="tabCapabilities">Tech Expertise</button>
+          </div>
+          
+          <div class="tab-pane active" id="tabMission">
+            <p>Our mission is to engineer high-integrity infrastructure that prevents waste accumulation in landfills. Through specialized consultation and advanced machinery partners, we empower enterprises, commercial complexes, and government agencies to process organic, liquid, and plastic waste close to the source, recycling materials back into the production cycle.</p>
+          </div>
+          
+          <div class="tab-pane" id="tabValues">
+            <p>We are driven by deep professional accountability. Every setup we deliver complies with strict regional pollution boards. We emphasize maximum material recovery, clean working environments, durability under heavy duty cycles, and clear environmental audit logging.</p>
+            <div class="value-list">
+              <div class="value-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero Bypass Integrity</span>
+              </div>
+              <div class="value-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Safe Deodorized Setups</span>
+              </div>
+              <div class="value-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>EPR Traceability Audits</span>
+              </div>
+              <div class="value-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Energy Efficient Engineering</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane" id="tabCapabilities">
+            <p>Through our strategic joint venture, we have direct access to state-of-the-art mechanical testing, electrical panel assembly, and chemical engineering labs. We supply compact systems capable of operating under restricted space conditions while maintaining high throughput. Our collaborative engineering integration ensures high recovery yields and regulatory compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Leadership / Managing Partners Section -->
+    <div class="container reveal" style="margin-top: 60px;">
+      <div class="partners-section">
+        <div class="text-center">
+          <span class="section-tag">Leadership Team</span>
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">Managing Partners</h3>
+          <p style="color: rgba(36, 50, 56, 0.7); max-width: 600px; margin: 0 auto;">Econex Env Solutions LLP is steered by experienced partners overseeing engineering compliance and operational strategy.</p>
+        </div>
+        <div class="partners-grid">
+          <!-- Partner 1 -->
+          <div class="partner-card">
+            <div class="partner-avatar">RG</div>
+            <h3>Rahul Ganesh</h3>
+            <div class="partner-role">Managing Partner</div>
+            <div class="partner-contact">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+918078108843">+91 80781 08843</a>
+            </div>
+          </div>
+          <!-- Partner 2 -->
+          <div class="partner-card">
+            <div class="partner-avatar">AG</div>
+            <h3>Amrutha Ganesh</h3>
+            <div class="partner-role">Managing Partner</div>
+            <div class="partner-contact">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+918281787244">+91 82817 87244</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 3. Services Section --- -->
+  <section id="services" class="section section-bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-tag">Our Services & Solutions</span>
+        <h2 class="section-title">Environmental Infrastructure & Service Integration</h2>
+        <p class="section-subtitle">In collaboration with leading environmental technology providers, certified recycling networks, and OEM partners, we integrate, commission, and operate compliant setups.</p>
+      </div>
+      
+      <div class="services-grid reveal">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Custom Leaf/Flow SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3>Organic Waste Management</h3>
+          <p>Decentralized composting, community bio-bins, and organic waste processing setups integrated in collaboration with certified agricultural and composting partners.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="organic-waste">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Gear/Eco SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <h3>Organic Waste Converter (OWC)</h3>
+          <p>High-efficiency mechanical systems supplied through our combined venture to crush and bio-stabilize organic waste, accelerating composting from months down to a few days.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="owc-machines">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Layers SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Plastic Waste Management</h3>
+          <p>End-to-end collections, segregation, and recovery. Facilitating corporate EPR liabilities and compliance in partnership with authorized plastic recycling networks.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="plastic-waste">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Droplet SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+          </div>
+          <h3>Sewage Treatment Solutions</h3>
+          <p>Turnkey commercial Sewage Treatment Plants (STP) using MBBR and SBR technology, integrated and commissioned in collaboration with specialized OEM manufacturing partners.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="sewage-treatment">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Service Card 5 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Recycle Truck / Shovel SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Biomining Services</h3>
+          <p>Remediation of landfill legacy waste, executed in alliance with specialized heavy-machinery associates to restore biological health and reclaim dumpsite land.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="biomining-services">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Service Card 6 -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <!-- Pie Chart SVG -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+              <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+            </svg>
+          </div>
+          <h3>Recycling & Env Solutions</h3>
+          <p>Corporate environmental auditing, zero-waste compliance frameworks, and bespoke sustainability advisory to streamline waste management tracking.</p>
+          <a href="#" class="btn-text service-learn-more" data-service="recycling-solutions">
+            Learn More 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. OWC Machine Highlight Section --- -->
+  <section id="owc" class="section owc-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-tag">Strategic Technology Partnership</span>
+        <h2 class="section-title">Organic Waste Converter (OWC) Systems</h2>
+        <p class="section-subtitle">Delivered through our strategic technology partnership. Custom aerobic composting setups designed for onsite biological recycling, engineered to integrate seamlessly into your facilities.</p>
+      </div>
+      
+      <div class="owc-showcase reveal">
+        <!-- Visual Gallery Left -->
+        <div class="owc-gallery">
+          <img id="owcMainImage" src="img/owc_machine.png" alt="Organic Waste Converter System supplied in joint venture" class="owc-main-img">
+        </div>
+        
+        <!-- Product Details Right -->
+        <div class="owc-details">
+          <h3 class="owc-main-title">Customizable OWC Setups</h3>
+          <p class="owc-main-desc">In partnership with specialized technology manufacturers, we integrate, install, and commission Organic Waste Converter setups tailored to your specific daily volume requirements and spatial constraints.</p>
+          
+          <div class="owc-benefits-list">
+            <div class="benefit-item">
+              <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <strong>Tailored System Design:</strong> Layouts customized based on daily organic waste volumes and site-specific civil/electrical configurations.
+              </div>
+            </div>
+            <div class="benefit-item">
+              <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <strong>Heavy-Duty Durability:</strong> Mixing chambers and blades constructed using corrosion-resistant industrial stainless steel.
+              </div>
+            </div>
+            <div class="benefit-item">
+              <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <strong>PLC Automation:</strong> Simple control interfaces with built-in safety interlocks, overload protection, and automated cycling.
+              </div>
+            </div>
+            <div class="benefit-item">
+              <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <strong>Odor Mitigation:</strong> Double-filtration exhaust configurations and negative-pressure ventilation to maintain fresh working air.
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-top: 25px;">
+            <a href="#contact" class="btn btn-primary" id="owcInquiryBtn">Inquire About Custom Setups</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- --- 6. Why Choose Us Section --- -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-tag">Value Proposition</span>
+        <h2 class="section-title">Built for Engineering Integrity & Trust</h2>
+        <p class="section-subtitle">B2B clients choose Econex because of our rigorous engineering standards, reliable equipment life cycles, and continuous operation models.</p>
+      </div>
+      
+      <div class="why-grid reveal">
+        <!-- Why Card 1 -->
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <h3>Custom B2B Engineering</h3>
+          <p>We do not sell pre-boxed fits. We design customized environmental systems based on physical site configurations, local weather parameters, and precise composition analysis of waste inputs.</p>
+        </div>
+        
+        <!-- Why Card 2 -->
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <h3>Guaranteed PCB Compliance</h3>
+          <p>Our setups are built to exceed standards set by central and state pollution control boards, ensuring hassle-free regulatory audits, zero-bypass water output, and odour-mitigated air vents.</p>
+        </div>
+        
+        <!-- Why Card 3 -->
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <h3>Maximized Material ROI</h3>
+          <p>By producing high-grade compost or recovering high-caloric RDF, we turn waste operational liabilities into positive resources, offsetting equipment costs within predictable timeframes.</p>
+        </div>
+        
+        <!-- Why Card 4 -->
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <h3>IoT Remote Automation</h3>
+          <p>All larger OWC machines and sewage plants integrate PLC systems with remote data logging. Track operational metrics, temperature cycles, energy consumption, and faults directly on desktop interfaces.</p>
+        </div>
+        
+        <!-- Why Card 5 -->
+        <div class="why-card">
+          <div class="why-num">05</div>
+          <h3>Industrial Build Durability</h3>
+          <p>We employ high-grade corrosion-resistant stainless steel (SS-304/SS-316) for internal mixing zones and shafts. Our machines are built for 24/7 industrial operating conditions.</p>
+        </div>
+        
+        <!-- Why Card 6 -->
+        <div class="why-card">
+          <div class="why-num">06</div>
+          <h3>Lifecycle Operations & Support</h3>
+          <p>Econex provides end-to-end Operations & Maintenance (O&M) contracts. Our dedicated technicians manage onsite waste processing daily, leaving corporate teams to focus on their core work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 7. Process Section --- -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-tag">Project Lifecycle</span>
+        <h2 class="section-title">Our Operational Process</h2>
+        <p class="section-subtitle">From initial advisory to everyday onsite management, we maintain rigorous engineering quality steps.</p>
+      </div>
+      
+      <div class="process-timeline reveal">
+        <!-- Step 1 -->
+        <div class="process-step active">
+          <div class="step-node">01</div>
+          <h3>Consultation</h3>
+          <p>Initial requirements gathering, waste load calculations, and feasibility analysis.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="step-node">02</div>
+          <h3>Site Analysis</h3>
+          <p>Physical spatial inspection, civil and utility routing, and waste composition testing.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="step-node">03</div>
+          <h3>Solution Design</h3>
+          <p>Custom engineering drawings, equipment layout planning, and structural reviews.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="step-node">04</div>
+          <h3>Installation</h3>
+          <p>Civil prep work, heavy machine rigging, pipeline laying, and panel integration.</p>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="process-step">
+          <div class="step-node">05</div>
+          <h3>O&M Support</h3>
+          <p>Dry and wet runs, operator handovers, periodic maintenance, and technical audit logging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 8. Testimonials / Client Trust Section --- -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-tag">Client Testimonials</span>
+        <h2 class="section-title">Trusted by Leading Organizations</h2>
+        <p class="section-subtitle">See how Econex helps municipal administrators and industrial facility leads execute sustainability goals.</p>
+      </div>
+      
+      <div class="testimonials-carousel-container reveal">
+        <div class="testimonials-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"The decentralized organic waste converter system supplied by Econex and their partners has worked seamlessly for our tech corridor. The project has diverted more than 500 tons of food waste and produces organic compost which our landscaping team uses. The system is extremely clean, odorless, and operates with high efficiency."</p>
+            <div class="testimonial-client">
+              <div class="client-avatar">RK</div>
+              <div class="client-meta">
+                <h4>Rajesh Kulkarni</h4>
+                <p>Facility Operations Director, Apex IT Park Complex</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"We utilized the legacy waste biomining systems provided by Econex's technology partners. Their high-capacity rotary trommels separated thousands of tons of RDF and compost with deep professionalism. Reclaimed nearly 4 acres of municipal land on schedule. Excellent collaborative engineering support."</p>
+            <div class="testimonial-client">
+              <div class="client-avatar">AS</div>
+              <div class="client-meta">
+                <h4>Dr. Amit Sharma</h4>
+                <p>Chief Municipal Commissioner, Urban Development Authority</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Operating an automotive manufacturing plant means zero compromises on wastewater discharge parameters. The 500 KLD SBR Sewage Treatment Plant built through Econex's partnership network has worked at 100% compliance since day one. Their remote IoT panel alerts our utility desk instantly about parameters."</p>
+            <div class="testimonial-client">
+              <div class="client-avatar">VB</div>
+              <div class="client-meta">
+                <h4>Vikram Bhardwaj</h4>
+                <p>VP Environmental Health & Safety, Zenith Automotive Ltd</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          
+          <div class="carousel-dots"></div>
+          
+          <button class="carousel-btn" id="nextTestimonial" aria-label="Next Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --- 9. Contact / Lead Generation Section --- -->
+  <section id="contact" class="section section-bg-white">
+    <div class="container">
+      <div class="contact-grid reveal">
+        <!-- Left Side: Corporate details -->
+        <div class="contact-info-panel">
+          <h3>Econex Corporate Office</h3>
+          <p>Get in touch with our environmental engineering division. Let's design a compliant, zero-waste system for your facilities.</p>
+          
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Registered Office Address</h4>
+                <p>Gayathrinivas, Annur PO,<br>Payyannur, Kannur, Kerala - 670307</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail-item">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Corporate Lines</h4>
+                <p><a href="tel:+918078108943">+91 80781 08943</a> (Office Line)</p>
+                <p><a href="tel:+918078108843">+91 80781 08843</a> (Rahul Ganesh)</p>
+                <p><a href="tel:+918281787244">+91 82817 87244</a> (Amrutha Ganesh)</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail-item">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Electronic Inquiries</h4>
+                <p><a href="mailto:econexenv@gmail.com">econexenv@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mock Map for UX Cleanliness -->
+          <div class="contact-map-mock">
+            <svg class="map-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+            <div class="map-text">
+              <h5>Location Map Verified</h5>
+              <p>Close to Outer Ring Road Metro (Phase-II extension)</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: validated B2B Inquiry Form -->
+        <div class="contact-form-panel">
+          <h3 class="form-title">Request Professional Consultation</h3>
+          <p class="form-subtitle">Fill in the technical requirement details below and our lead design engineer will contact you.</p>
+          
+          <form id="leadGenerationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Your Name *</label>
+                <input type="text" id="clientName" class="form-input" placeholder="e.g. John Doe" required>
+                <span class="error-message">Name is required (min 2 characters).</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="companyName">Company Name *</label>
+                <input type="text" id="companyName" class="form-input" placeholder="e.g. Acme Corporation" required>
+                <span class="error-message">Company name is required (min 2 characters).</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientEmail">Corporate Email *</label>
+                <input type="email" id="clientEmail" class="form-input" placeholder="e.g. john@company.com" required>
+                <span class="error-message">Please enter a valid business email.</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="phoneNumber">Direct Mobile / Phone *</label>
+                <input type="tel" id="phoneNumber" class="form-input" placeholder="e.g. +91 98765 43210" required>
+                <span class="error-message">Please enter a valid 10-15 digit phone number.</span>
+              </div>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="serviceRequired">Required Solution *</label>
+              <select id="serviceRequired" class="form-input" required>
+                <option value="">Select a service category</option>
+                <option value="organic">Organic Waste Management Setups</option>
+                <option value="owc">Organic Waste Converter (OWC) Machines</option>
+                <option value="plastic">Plastic Waste Recycling & EPR</option>
+                <option value="sewage">Sewage & Wastewater Treatment (STP)</option>
+                <option value="biomining">Landfill Biomining & Cleansing</option>
+                <option value="recycling">General Corporate Environmental Advisory</option>
+              </select>
+              <span class="error-message">Please select a service category.</span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="clientMessage">Detailed Message / Scope *</label>
+              <textarea id="clientMessage" class="form-input" rows="4" placeholder="Briefly describe daily waste volumes, space availability, project location, or timelines..." required></textarea>
+              <span class="error-message">Please describe your requirements (min 10 characters).</span>
+            </div>
+            
+            <div class="form-submit-container">
+              <span class="form-privacy-note">By submitting, you agree to allow Econex engineers to contact you regarding industrial environmental solutions.</span>
+              <button type="submit" class="btn btn-primary" id="formSubmitBtn">
+                <span class="loader"></span>
+                <span>Request Consultation</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 10. Footer Section --- -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-col footer-brand">
+        <a href="#home" class="logo" style="color: var(--white); margin-bottom: 20px;">
+          <!-- Inline Logo -->
+          <svg class="logo-icon" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left Loop: Leaf -->
+            <path d="M 80 45 C 50 15, 15 15, 15 45 C 15 75, 50 75, 80 45 Z" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" />
+            <path d="M 15 45 C 35 40, 60 45, 80 45" stroke="#2FAF90" stroke-width="4.5" stroke-linecap="round" />
+            
+            <!-- Right Loop: Gear -->
+            <path d="M 80 45 C 110 15, 145 15, 145 45 C 145 75, 110 75, 80 45 Z" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" />
+            
+            <!-- Gear teeth -->
+            <g transform="translate(112.5, 45)">
+              <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#FFFFFF" transform="rotate(-90)" />
+              <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#FFFFFF" transform="rotate(-60)" />
+              <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#FFFFFF" transform="rotate(-30)" />
+              <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#FFFFFF" transform="rotate(0)" />
+              <rect x="-5.5" y="-39.5" width="11" height="11" rx="2" fill="#FFFFFF" transform="rotate(30)" />
+            </g>
+          </svg>
+          <div class="logo-text-wrapper">
+            <span class="logo-main" style="color: var(--white);">ECONEX</span>
+            <span class="logo-sub" style="color: rgba(255, 255, 255, 0.7);">ENV SOLUTIONS LLP</span>
+          </div>
+        </a>
+        <p>Premium environmental engineering infrastructure and sustainable waste treatment services for industries, institutions, and communities.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="LinkedIn Profile">IN</a>
+          <a href="#" class="social-btn" aria-label="YouTube Channel">YT</a>
+          <a href="#" class="social-btn" aria-label="Twitter Feed">TW</a>
+        </div>
+      </div>
+      
+      <!-- Col 2: Sitemap Links -->
+      <div class="footer-col">
+        <h4>Corporate Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About Us</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#owc" class="footer-link">OWC Machines</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Services Sitemap -->
+      <div class="footer-col">
+        <h4>Environmental Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services" class="footer-link">Organic Waste Management</a></li>
+          <li><a href="#owc" class="footer-link">Organic Waste Converters</a></li>
+          <li><a href="#services" class="footer-link">Plastic EPR Systems</a></li>
+          <li><a href="#services" class="footer-link">Sewage Plants (STP)</a></li>
+          <li><a href="#services" class="footer-link">Landfill Biomining</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Corporate Newsletter -->
+      <div class="footer-col footer-newsletter">
+        <h4>Sustainability Brief</h4>
+        <p>Subscribe to our quarterly environmental compliance briefings and technology rollouts.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our Sustainability Briefing.'); this.reset();">
+          <input type="email" class="newsletter-input" placeholder="Corporate email" aria-label="Newsletter email input" required>
+          <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Econex Env Solutions LLP. All Rights Reserved. Engineered with Environmental Integrity.</p>
+      <div class="footer-legal-links">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Terms & Conditions</a>
+        <a href="#" class="footer-legal-link">E-Waste Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+     Modal Overlay for Service Details
+     ========================================== -->
+  <div id="serviceModal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Details Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-wrapper">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </div>
+        <div class="modal-title-box">
+          <h3 id="modalTitle">Service Title</h3>
+          <span id="modalTag">Category Tag</span>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <p class="modal-desc" id="modalDesc">Detailed explanation of services...</p>
+        
+        <h4 class="modal-section-title">Key Capabilities & Offerings</h4>
+        <ul class="modal-features-list">
+          <!-- Populated by JS -->
+        </ul>
+        
+        <h4 class="modal-section-title">Technical Specifications</h4>
+        <div class="modal-tech-specs">
+          <table class="modal-specs-table">
+            <!-- Populated by JS -->
+          </table>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close-btn-footer" onclick="document.getElementById('serviceModal').classList.remove('active'); document.body.style.overflow = '';">Close</button>
+        <button class="btn btn-primary modal-inquire-btn" data-service-key="">Inquire About Service</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
