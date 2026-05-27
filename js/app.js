@@ -1,7 +1,6 @@
 // --- CONFIGURATION ---
-// Get a free Web3Forms Access Key at: https://web3forms.com
-// Paste the access key below to start receiving email submissions instantly!
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+// Submissions from the contact form will be routed directly to this email address.
+const OWNER_EMAIL = "econexenv@gmail.com";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -546,69 +545,45 @@ document.addEventListener('DOMContentLoaded', () => {
         timestamp: new Date().toISOString()
       };
 
-      if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_ACCESS_KEY_HERE") {
-        // Send actual email submission via Web3Forms
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `New Lead - ${formData.company} (${formData.service})`,
-            from_name: "Econex Web Portal",
-            name: formData.name,
-            company: formData.company,
-            phone: formData.phone,
-            email: formData.email,
-            service: formData.service,
-            message: formData.message
-          })
+      // Send actual email submission via FormSubmit.co
+      fetch(`https://formsubmit.co/ajax/${OWNER_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Econex Lead - ${formData.company}`,
+          name: formData.name,
+          company: formData.company,
+          phone: formData.phone,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message
         })
-        .then(async (response) => {
-          const result = await response.json();
-          if (response.status === 200) {
-            showToast('Consultation Requested', 'Thank you! Your inquiry was sent successfully. We will contact you soon.');
-            contactForm.reset();
-            Object.values(inputs).forEach(input => {
-              if (input) input.classList.remove('error');
-            });
-          } else {
-            showToast('Submission Error', result.message || 'Something went wrong. Please try again.');
-          }
-        })
-        .catch(error => {
-          showToast('Network Error', 'Failed to connect. Please check your internet connection.');
-        })
-        .finally(() => {
-          submitBtn.disabled = false;
-          if (loader && btnText) {
-            loader.style.display = 'none';
-            btnText.textContent = 'Request Consultation';
-          }
-        });
-      } else {
-        // Simulate B2B API Lead ingestion post (Local fallback)
-        setTimeout(() => {
-          const existingLeads = JSON.parse(localStorage.getItem('econex_leads') || '[]');
-          existingLeads.push(formData);
-          localStorage.setItem('econex_leads', JSON.stringify(existingLeads));
-
-          submitBtn.disabled = false;
-          if (loader && btnText) {
-            loader.style.display = 'none';
-            btnText.textContent = 'Request Consultation';
-          }
-          
+      })
+      .then(async (response) => {
+        const result = await response.json();
+        if (response.status === 200 || result.success === "true") {
+          showToast('Consultation Requested', 'Success! Please check your email inbox to activate form notifications.');
           contactForm.reset();
           Object.values(inputs).forEach(input => {
             if (input) input.classList.remove('error');
           });
-
-          showToast('Consultation Requested', 'Local Simulation Success! Get a Web3Forms key to receive actual emails.');
-        }, 1200);
-      }
+        } else {
+          showToast('Submission Error', result.message || 'Something went wrong. Please try again.');
+        }
+      })
+      .catch(error => {
+        showToast('Network Error', 'Failed to connect. Please check your internet connection.');
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        if (loader && btnText) {
+          loader.style.display = 'none';
+          btnText.textContent = 'Request Consultation';
+        }
+      });
     });
   }
 
