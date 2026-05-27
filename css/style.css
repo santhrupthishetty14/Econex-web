@@ -1104,32 +1104,7 @@ ul {
   color: var(--accent);
 }
 
-.contact-map-mock {
-  margin-top: auto;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
-.map-icon {
-  color: var(--accent);
-}
-
-.map-text h5 {
-  color: var(--white);
-  font-size: 0.9rem;
-  margin-bottom: 2px;
-}
-
-.map-text p {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
-}
 
 .contact-form-panel {
   padding: 60px;
